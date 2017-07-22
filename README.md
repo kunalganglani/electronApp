@@ -18,5 +18,10 @@ To validate follow these steps:
 4. Provide your 12 digit aadhar id and press Verify button.
 5. provide your 6 digit OTP, and check the user agreement checkbox. 
 6. Press the submit button. 
+(The above steps can be seen without installing the application. Just open the screenshots by following the link: https://github.com/kunalganglani/electronApp/tree/master/screenshots)
 
 Congratulations you have successfuly validated your Aadhar Card Information. Call me at +91-982663604 now. You owe me a treat. :)
+
+
+Best Regards,
+Kunal Ganglani
