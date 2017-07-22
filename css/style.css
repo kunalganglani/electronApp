@@ -1,0 +1,109 @@
+/*div{
+        border: 1px solid black;
+    }*/
+    .themeStyle{
+        background: rgb(0, 116, 189);
+        color: white;
+    }
+    .alignText{
+        text-align: center;
+        line-height: 3.5rem;
+    }
+    .smallMarginTop{
+        margin-top: 20px;
+    }
+    .greenStrip{
+        background: rgb(217, 234, 211);
+        color: rgb(2, 122, 189);
+    line-height: 39px;
+    height: 39px;
+    text-align: center;
+    }
+    .logo{
+         background: white;
+         width:263px;
+         margin-top:50px 
+    }
+.btn-googleplus {
+	  background: #E93F2E;
+	  border-radius: 0;
+	  color: #fff;
+	  border-width: 1px;
+	  border-style: solid;
+	  border-color: #b72213;
+      border-radius: 6px;
+	}
+    .center {
+    margin-left: 36%;
+    width: 30%;
+}
+.continueButton{
+    width: 250px;
+    margin-left: 70px;
+    background: rgb(0, 116, 189);
+        color: white;
+
+}
+.hidden{
+    display: none;
+}
+.verifyButton{
+    width: 120px;
+}
+.requestButton{
+    width: 250px;
+    left: calc(50% - (125px));
+    position: absolute;
+    background: rgb(0, 116, 189);
+        color: white;
+ 
+}
+.pdfStyle{
+    width: 100%;
+    height: 440px;
+}
+.footer{
+    bottom: 0px;
+    position: absolute;
+    width: 96%;
+}
+.leftFloat{
+    float: left;
+}
+.smallPadding{
+    padding: 5px;
+}
+.rightFloat{
+    float: right;
+}
+
+.hr-text {
+  line-height: 1em;
+  position: relative;
+  outline: 0;
+  border: 0;
+  color: black;
+  text-align: center;
+  height: 1.5em;
+  opacity: .5;
+}
+.hr-text:before {
+  content: '';
+  background: -webkit-linear-gradient(left, transparent, #818078, transparent);
+  background: linear-gradient(to right, transparent, #818078, transparent);
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  height: 1px;
+}
+.hr-text:after {
+  content: attr(data-content);
+  position: relative;
+  display: inline-block;
+  color: black;
+  padding: 0 .5em;
+  font-weight: bold;
+  line-height: 1.5em;
+  background-color: #fcfcfa;
+}

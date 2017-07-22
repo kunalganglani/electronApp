@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+    <meta charset="UTF-8">
+    <title>Digio Doc Verification</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+    <script>window.$ = window.jQuery = require('jquery');</script>
+    <script>require('bootstrap');</script>
+    
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+
+    <script>
+        $(document).ready(function () {
+
+            $("#submitBut").click(function () {
+                 $('#myModal').modal('toggle');
+                $('#secondModel').modal('show');
+            });
+
+
+            $("#verifyBut").click(function () {
+                $("#usr").removeClass('hidden');
+            });
+
+            var verify = function () {
+                if ($("#usr").val().length === 6 && /^\d+$/.test($("#usr").val()) && $("#kycCheck").is(':checked')) {
+                    $("#submitBut").attr("disabled", false);
+                }
+                else {
+                    $("#submitBut").attr("disabled", "disabled");
+                }
+            };
+            $('#kycCheck').change(verify);
+            $("#usr").keyup(verify);
+
+            $("#aadharid").keyup(function () {
+                if ($("#aadharid").val().length === 12 && /^\d+$/.test($("#aadharid").val())) {
+                    $("#verifyBut").attr("disabled", false);
+                }
+                else {
+                    $("#verifyBut").attr("disabled", "disabled");
+                }
+            });
+            $("#myBtn").click(function () {
+                $('#myModal').modal('show');
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title" id="myModalLabel">Register Aadhar</h4>
+                    </div>
+
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-sm-2">
+                                <img src="assets/aadhar.png" width="60px" height="48px" />
+                            </div> 
+                            <div class="col-sm-7">
+                                <input height="50px" type="text" class="form-control input-lg" id="aadharid">
+                            </div>
+
+                            <div class="col-sm-3">
+                                <button id="verifyBut" type="button" class="btn btn-primary verifyButton btn-lg" disabled="disabled">Verify</button>
+                            </div>
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col-sm-2">
+                            </div>
+
+                            <div class="col-sm-10">
+                                <input id="kycCheck" type="checkbox" name="agree" value="yes"> I agree to eSign this <a href="#">KYC document</a>to
+                                get started
+                            </div>
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col-sm-5">
+                            </div>
+
+                            <div class="col-sm-4">
+                                <input type="text" class="form-control input-lg hidden" id="usr">
+                            </div>
+
+                            <div class="col-sm-3">
+                                <button id="submitBut" type="button" class="btn btn-primary verifyButton btn-lg" disabled="disabled">Submit</button>
+                            </div>
+
+
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="secondModel" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">Signing...</h4>
+                        <a>Mutual Non-Disclosure Agreement</a>
+                    </div>
+
+                    <div class="modal-body">
+                       <div class="greenStrip">
+                           <i class="fa fa-check-circle" style="color:green"></i> Aadhar Verified Successfully</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        
+        <div class="row themeStyle">
+            <h1>Sign document using</h1>
+            <h3>sanket@digio.in</h3>
+        </div>
+
+
+        <div class="row smallMarginTop">
+            <div class="col-sm-12">
+
+                <iframe class="pdfStyle" src="http://docs.google.com/gview?url=http://path.com/to/your/pdf.pdf&embedded=true" frameborder="0"></iframe>
+            </div>
+        </div>
+
+
+        <div class="row smallMarginTop">
+            <div class="col-sm-12">
+                <button id="myBtn" class="btn btn-lg requestButton" onclick="">Request OTP to Sign</a>
+   
+    </div>
+   
+
+    </div>
+
+
+  <div class="footer smallMarginTop">
+    <div class="col-sm-6" >
+  <div class="leftFloat"><img src="assets/digio_logo.jpg" width="40px" height="40px"/></div>
+  <div class="leftFloat smallPadding">Powered by<br><a href="www.digio.in">www.Digio.in</a></div>
+    </div>
+    <div class="col-sm-6">
+       <div class="rightFloat alignText">2/3 Steps</div>
+    </div>
+  
+</div>
+
+</div>
+
+</body>
+
+</html>
